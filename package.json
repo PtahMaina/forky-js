@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel index.html"
+    "build": "parcel index.html--dist-dir"
   },
   "author": "Peter Maina",
   "license": "ISC"
