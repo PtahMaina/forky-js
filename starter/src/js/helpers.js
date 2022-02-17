@@ -21,7 +21,7 @@ export const AJAX = async function (url, uploadData = undefined) {
         })
       : fetch(url);
 
-    const res = await Promise.race([fetch(url), timeout(TIME_OUT)]);
+    const res = await Promise.race([fetchPro, timeout(TIME_OUT)]);
     // 'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'
     const data = await res.json();
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
